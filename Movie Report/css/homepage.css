@@ -1,0 +1,674 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.screen{
+    height: 100vh;
+    width: 100vw;
+}
+
+.screen-1{
+    background-color: #131517;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.top-left,
+.bottom-right{
+    position: absolute;
+    height: 450px;
+    width: 500px;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.top-left{
+    position: absolute;
+    border-radius: 73% 27% 56% 44% / 0% 74% 26% 100%; 
+    top: -100px;
+    left: -120px;
+    animation: top-blob 20s ease-in-out infinite;
+    background-color: black;
+}
+
+.bottom-right{
+    bottom: 0px;
+    right: -120px;
+    animation: bottom-blob 20s ease-in-out infinite;
+    border-radius: 54% 46% 62% 38% / 53% 64% 36% 47% ;
+    background-color: #22ffb8;
+}
+
+@keyframes top-blob{
+    0%{
+        border-radius: 30% 70% 57% 43% / 65% 80% 20% 35%; 
+    }
+
+    25%{
+        transform: translateY(-10%);
+        border-radius: 57% 43% 58% 42% / 0% 27% 73% 100%; 
+    }
+
+    50%{
+        transform: translateX(-10%);
+        border-radius: 78% 22% 74% 26% / 0% 67% 33% 100%; 
+    }
+
+    75%{
+        border-radius: 72% 28% 26% 74% / 12% 80% 20% 88%; 
+    }
+
+    100%{
+        border-radius: 30% 70% 57% 43% / 65% 80% 20% 35%; 
+    }
+}
+
+@keyframes bottom-blob{
+    0%{
+        border-radius: 54% 46% 62% 38% / 53% 64% 36% 47% ;
+    }
+
+    25%{
+        transform: translateY(10%);
+        border-radius: 50% 50% 53% 47% / 66% 54% 46% 34%; 
+    }
+
+    50%{
+        transform: translateX(10%);
+        border-radius: 79% 21% 54% 46% / 41% 82% 18% 59%; 
+    }
+
+    75%{
+        border-radius: 100% 0% 27% 73% / 74% 86% 14% 26% ; 
+    }
+
+    100%{
+        border-radius: 54% 46% 62% 38% / 53% 64% 36% 47% ;
+    }
+}
+
+.header{
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+.header a h1{
+    font-size: 4rem;
+    z-index: 2;
+    color: white;
+}
+
+.header a:nth-child(1){
+    text-decoration: none;
+}
+
+.header .links{
+    width: 70%;
+    display: flex;
+    justify-content: end;
+    gap: 70px;
+    font-size: 2rem;
+}
+
+.header .links a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.header .links a:hover{
+    color: #22ffb8;
+}
+
+.content{
+    height: 80%;
+    width: 100%;
+    padding-left: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    z-index: 2;
+}
+
+.content h3{
+    color: #22ffb8;
+    font-weight: normal;
+    z-index: 2;
+}
+
+.content h1{
+    font-weight: bolder;
+    font-size: 5rem;
+    z-index: 2;
+}
+
+.content p{
+    width: 40%;
+    font-size: 1.3rem;
+    z-index: 2;
+}
+
+.screen-2{
+    background-color: white;
+    height: 150vh;
+}
+
+.screen-2 .motif{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    color: #494949;
+}
+
+.screen-2 .motif .imitation-game{
+    margin-top: 100px;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen-2 .motif .imitation-game h1{
+    font-family: 'Lucida Console', Monaco, monospace;
+    font-weight: bolder;
+    font-size: 90px;
+    margin-top: 50px;
+    color: black;
+    text-shadow: 1px 1px 0 #494949;
+}
+
+.screen-2 .motif .imitation-game .the{
+    height: 30%;
+    width: 60%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.screen-2 .motif .banner{
+    height: 25%;
+    width: 60%;
+    border: 1px solid black;
+}
+
+.screen-2 .motif .banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.screen-2 .motif h2{
+    margin-top: 50px;
+    width: 60%;
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.screen-2 .motif .synopsis{
+    margin-top: 50px;
+    height: 30%;
+    width: 60%;
+    border-top: 1px solid black;
+    display: flex;
+}
+
+.screen-2 .motif .synopsis .crew{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.screen-2 .motif .synopsis .crew p{
+    font-size: 0.7rem;
+    text-align: justify;
+    margin: 0;
+}
+
+.screen-2 .motif .synopsis .plot{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding-left: 20%;
+}
+
+.screen-2 .motif .synopsis .plot p{
+    font-size: 1rem;
+    text-align: justify;
+    margin: 10px;
+}
+
+@media screen and (max-width: 1440px){
+    .screen-2{
+        height: 215vh;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .screen-2{
+        height: 175vh;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .screen-2{
+        height: 250vh;
+    }
+}
+
+.screen-3{
+    background-color: #131517;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.screen-3 .title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 35.1%;
+}
+
+.screen-3 .title .upper{
+    width: 30%;
+    height: calc(100% / 2);
+    border-bottom: 1px solid white;
+    margin-left: 5%;
+}
+
+.screen-3 .title .lower{
+    width: 35%;
+    height: calc(100% / 2);
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+
+.screen-3 .title .lower h1{
+    font-size: 3rem;
+    margin: 0;
+    padding-left: 20%;
+    padding-top: 10px;
+    color: white;
+}
+
+.screen-3 .cast{
+    height: 100%;
+    width: 95%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+
+.cast > .members{
+    height: calc(65% / 5);
+    width: 65%;
+    color: white;
+    border: 1px solid white;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+}
+
+.cast .members:nth-child(5){
+    border-bottom: 1px solid white;
+}
+
+.screen-3 .cast h2{
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.screen-3 .cast .image-1{
+    height: 250px;
+    width: 350px;
+    position: absolute;
+    left: -20px;
+    transform: rotate(30deg) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.screen-3 .cast .members i{
+    font-weight: bolder;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.screen-3 .cast .member-1:hover > .image-1{
+    transform: rotate(0deg) scale(1);
+    z-index: 2;
+}
+
+.screen-3 .cast .member-1:hover > h2 i{
+    color: #22ffb8;
+}
+
+.screen-3 .cast .image-2{
+    height: 250px;
+    width: 300px;
+    position: absolute;
+    left: 50px;
+    transform: rotate(30deg) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.screen-3 .cast .member-2:hover > .image-2{
+    transform: rotate(0deg) scale(1);
+    z-index: 2;
+}
+
+.screen-3 .cast .member-2:hover > h2 i{
+    color: #22ffb8;
+}
+
+.screen-3 .cast .image-3{
+    height: 250px;
+    width: 400px;
+    position: absolute;
+    left: -30px;
+    transform: rotate(30deg) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.screen-3 .cast .member-3:hover > .image-3{
+    transform: rotate(0deg) scale(1);
+    z-index: 2;
+}
+
+.screen-3 .cast .member-3:hover > h2 i{
+    color: #22ffb8;
+}
+
+.screen-3 .cast .image-4{
+    height: 280px;
+    width: 200px;
+    position: absolute;
+    left: 150px;
+    transform: rotate(30deg) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.screen-3 .cast .member-4:hover > .image-4{
+    transform: rotate(0deg) scale(1);
+    z-index: 2;
+}
+
+.screen-3 .cast .member-4:hover > h2 i{
+    color: #22ffb8;
+}
+
+.screen-3 .cast .image-5{
+    height: 200px;
+    width: 320px;
+    position: absolute;
+    left: 50px;
+    transform: rotate(30deg) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.screen-3 .cast .member-5:hover > .image-5{
+    transform: rotate(0deg) scale(1);
+    z-index: 2;
+}
+
+.screen-3 .cast .member-5:hover > h2 i{
+    color: #22ffb8;
+}
+
+.screen-3{
+    background-color: #131517;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen-4{
+    background-color: white;
+}
+
+.screen-4 .director{
+    width: 100%;
+    height: 40%;
+    color: black;
+    border-bottom: 1px solid black;
+    font-family: 'Allerta Stencil';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen-4 .director h1{
+    font-size: 10rem;
+    margin: 0;
+}
+
+.screen-4 .details{
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.screen-4 .details .position{
+    height: 100%;
+    width: 10%;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: 'Allerta Stencil';
+}
+
+.screen-4 .details .position p{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.screen-4 .details .profile{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.screen-4 .details .profile img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.screen-4 .details .interview{
+    height: 100%;
+    width: 60%;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    color: black;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.screen-4 .details .interview p{
+    margin: 50px;
+}
+
+.screen-5{
+    background-color: #131517;
+}
+
+.screen-5 .padding{
+    height: 5%;
+}
+
+.screen-5 .review{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: white;
+    margin-left: 30px;
+    border-left: 5px solid #22ffb8;
+    margin-top: 10px;
+}
+
+.screen-5 .review h1{
+    padding-left: 30px;
+    font-weight: normal;
+}
+
+.screen-5 .container{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.screen-5 .container > .individual-review{
+    height: calc(100% / 4);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.screen-5 .container > .individual-review .content{
+    background-color: white;
+    height: 90%;
+    width: 60%;
+    border: 1px solid black;
+    box-shadow: 7px 7px 0 #22ffb8;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.screen-5 .container > .individual-review .content .reviewer{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.screen-5 .container > .individual-review .content .text{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.screen-5 .container > .individual-review .content .text .opinion{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.screen-5 .container > .individual-review .content .text .opinion h6{
+    margin: 15px;
+    width: 100%;
+    text-align: justify;
+}
+
+.screen-5 .container > .individual-review .content .text .link{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items: end;
+    justify-content: end;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+
+.screen-5 .container > .individual-review .content .text .link a{
+    color: black;
+    text-decoration: none;
+}
+
+.screen-5 .container > .individual-review .content .text .link a:hover{
+    color: #22ffb8;
+}
+
+.screen-5 .container > .individual-review .content .reviewer h4{
+    margin: 0;
+}
+
+.screen-5 .container > .individual-review .content .reviewer i{
+    color: yellow;
+    text-shadow: 1px 1px 0 black;
+}
+
+.screen-5 .container .individual-review:nth-child(1),
+.screen-5 .container .individual-review:nth-child(3){
+    justify-content: start;
+    padding-left: 100px;
+}
+
+.screen-5 .container .individual-review:nth-child(2),
+.screen-5 .container .individual-review:nth-child(4){
+    justify-content: end;
+    padding-right: 100px;
+}
+
+.footer{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer h5{
+    color: #494949;
+    margin: 0;
+}

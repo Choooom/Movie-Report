@@ -1,0 +1,118 @@
+/* Base font size */
+html {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  @media only screen and (max-width: 480px) {
+    html {
+      font-size: 6px;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    html {
+      font-size: 8px;
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 1370px) {
+    html {
+      font-size: 12px;
+    }
+  }
+  
+  /* Header tags */
+  h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  h6 {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  /* Paragraphs */
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  /* Media queries for smaller screens */
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    h2 {
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    h5 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    h6 {
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 0.875rem;
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  

@@ -1,0 +1,271 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: all 1s ease-in-out;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: black;
+}
+
+.modal-container{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+::-webkit-scrollbar {
+    background-color: black;
+    width: 1px;
+    height: 3px;
+    margin-bottom: 20px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+}
+  
+.modal-content {
+    background-color: black;
+    padding: 0;
+    border: 1px solid #888;
+    width: 200%;
+    height: 100%;
+    border-style: none;
+    display: flex;
+    gap: 250px;
+    position: relative;
+    transform: translateX(100%);
+    transition: all 1s ease-in-out;
+    display: flex;
+}
+
+#technical-aspect-modal .modal-content,
+#acting-modal .modal-content,
+#conclusion-modal .modal-content{
+    width: 150%;
+    height: 100%;
+}
+
+#technical-aspect-modal .vertical,
+#acting-modal .vertical,
+#conclusion-modal .vertical{
+    width: 27.5%;
+    height: 100%;
+}
+
+.modal-open {
+    opacity: 1;
+}
+
+/* Add animation to slide the modal in */
+.modal-open .modal-content {
+    transform: translateX(0);
+}
+.close1,
+.close2,
+.close3,
+.close4,
+.close5,
+.close6,
+.close7{
+    color: white;
+    position: absolute;
+    font-size: 3rem;
+    top: 0;
+    right: 50px;
+    cursor: pointer;
+}
+  
+.close1:hover,
+.close2:hover,
+.close3:hover,
+.close4:hover,
+.close5:hover,
+.close6:hover,
+.close7:hover{
+    color: #22ffb8;
+}
+
+.vertical{
+    height: 100%;
+    width: 25%;
+    position: relative;
+}
+
+.vertical::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.vertical img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.vertical h1{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.856);
+    left: 100px;
+    top: 70px;
+    width: 65%;
+    font-size: 4rem;
+}
+
+.meaning{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.959);
+}
+
+.meaning p{
+    text-align: justify;
+}
+
+.meaning-1 p{
+    padding-left: 30%;
+    padding-right: 20%;
+}
+
+.meaning-2 p{
+    padding-left: 3%;
+    padding-right: 13%;
+}
+
+.meaning i{
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.726);
+}
+
+.image-container{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container1 img{
+    height: 100%;
+    width: 60%;
+    object-fit: cover;
+}
+
+.meaning-3{
+    flex-direction: row;
+}
+
+.meaning-3 p{
+    width: 30%;
+}
+
+.container-3{
+    width: 70%;
+}
+
+.container-3 img{
+    width: 80%;
+}
+
+.meaning-4 p{
+    padding-left: 14%;
+    padding-right: 14%;
+}
+
+.meaning-5 p{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.meaning-6 p{
+    padding-right: 23%;
+}
+
+.meaning-7{
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.meaning-7 .image-container{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meaning-7 p{
+    padding-left: 15%;
+}
+
+.meaning-7 .image-container img{
+    height: 80%;
+    width: 70%;
+    object-fit: cover;
+}
+
+.meaning-8{
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.meaning-8 .image-container{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10%;
+}
+
+.meaning-8 p{
+    padding-left: 5%;
+    padding-right: 6%;
+}
+
+.meaning-8 .image-container img{
+    height: 80%;
+    width: 70%;
+    object-fit: cover;
+}
+
+.meaning-13{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.video-container {
+    position: relative;
+    width: 300%;
+    height: 70%;
+    padding-left: 20%;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+}
+
+.video-container video::-webkit-media-controls-start-playback-button {
+    display: none;
+}
